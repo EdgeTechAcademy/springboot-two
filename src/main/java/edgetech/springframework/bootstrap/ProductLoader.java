@@ -45,6 +45,4 @@ public class ProductLoader implements ApplicationListener<ContextRefreshedEvent>
 		productRepository.save(product);
 		log.info( "id: " + product.getId() + "  " + product.getDescription( ));
 	}
-
-
 }
