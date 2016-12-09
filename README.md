@@ -13,12 +13,12 @@
   3.  MySQL - A real database used by a significant portion of the web world
   4.  thymeleaf template - Defines a template for where all of our files are going to be found
   5.  web jars
-    *  You are going to use these two packages so frequently why worry about which version
+     *  You are going to use these two packages so frequently why worry about which version
 		you are using and where to find it. Let Spring box them up in our jar and provide
 		them to our front end HTML.
-    *  bootstrap - does great things for managing your web page without needing to know
+     1.  bootstrap - does great things for managing your web page without needing to know
 		which browser or platform you are running on
-    *  jQuery	- This is what the big kids are using on their web site to get
+     2.  jQuery	- This is what the big kids are using on their web site to get
 		data to where they want it.
 
 ####		Our application can be found at http://localhost:8080
