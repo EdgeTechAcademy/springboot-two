@@ -23,8 +23,13 @@
 
 ####		Our application can be found at http://localhost:8080
 
-| Page              | URL                                 |
-|-------------------|-------------------------------------|
-| home page 		|	`http://localhost:8080/`          |
-| list Products		|	`http://localhost:8080/products`  |
-| list a Product	|	`http://localhost:8080/product/4` |
+| Page              | URL                                 	| Method |
+|-------------------|-------------------------------------	|--------|
+| home page 		| `http://localhost:8080/`          	| GET    |
+| list Products		| `http://localhost:8080/products`  	| GET    |
+| list Odd Products	| `http://localhost:8080/oddProducts`	| GET    |
+| show Product		| `http://localhost:8080/product/{id}`	| GET    |
+| edit Product		| `http://localhost:8080/product/edit/{id}`| GET    |
+| new Product		| `http://localhost:8080/product/new`	| GET    |
+| save Product		| `http://localhost:8080/product`		| POST |
+| delete Product	| `http://localhost:8080/product/delete/{id}`| |
