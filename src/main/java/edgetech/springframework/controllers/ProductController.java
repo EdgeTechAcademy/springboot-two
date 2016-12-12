@@ -37,42 +37,12 @@ public class ProductController {
 		return "products";
 	}
 
-	@RequestMapping(value = "/oddProducts", method = RequestMethod.GET)
-	public String listOdd(Model model){
-		model.addAttribute("products", productService.listOddProducts());
-		System.out.println("Returning products:");
-		return "products";
-	}
-
 	@RequestMapping("product/{id}")
 	public String showProduct(@PathVariable Integer id, Model model){
-		model.addAttribute("product", productService.getProductById(id));
-		return "productshow";
-	}
-
-	@RequestMapping("product/edit/{id}")
-	public String edit(@PathVariable Integer id, Model model){
-		model.addAttribute("product", productService.getProductById(id));
-		return "productform";
-	}
-
-	@RequestMapping("product/new")
-	public String newProduct(Model model){
-		model.addAttribute("product", new Product());
-		return "productform";
-	}
-
-	@RequestMapping(value = "product", method = RequestMethod.POST)
-	public String saveProduct(Product product){
-
-		productService.saveProduct(product);
-
-		return "redirect:/product/" + product.getId();
-	}
-
-	@RequestMapping("product/delete/{id}")
-	public String delete(@PathVariable Integer id){
-		productService.deleteProduct(id);
-		return "redirect:/products";
+		if ( productService.getProductById(id) != null ) {
+			model.addAttribute("product", productService.getProductById(id));
+			return "productshow";
+		}
+		else return "404";
 	}
 }

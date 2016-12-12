@@ -25,7 +25,7 @@
 | list Products		| `http://localhost:8080/products`  	| GET    |
 | list Odd Products	| `http://localhost:8080/oddProducts`	| GET    |
 | show Product		| `http://localhost:8080/product/{id}`	| GET    |
-| edit Product		| `http://localhost:8080/product/edit/{id}`| GET    |
+| edit Product		| `http://localhost:8080/product/edit/{id}`| GET |
 | new Product		| `http://localhost:8080/product/new`	| GET    |
-| save Product		| `http://localhost:8080/product`		| POST |
-| delete Product	| `http://localhost:8080/product/delete/{id}`| |
+| save Product		| `http://localhost:8080/product`		| POST   |
+| delete Product	| `http://localhost:8080/product/delete/{id}`| GET |
