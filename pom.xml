@@ -39,10 +39,10 @@
 		</dependency>
 
 		<!--
-				Generation Two - welcome the the 21st century
-					JPA - We want to access a database - Java Persistent A
-					H2 	- An in-memory database that makes life and testing easy
-					MySQL - A real database used by a significant portion of the web world
+			Generation Two - welcome the the 21st century
+				JPA - We want to access a database - Java Persistent A
+				H2 	- An in-memory database that makes life and testing easy
+				MySQL - A real database used by a significant portion of the web world
 		-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -58,8 +58,8 @@
 		</dependency>
 
 		<!--
-				Generation Two - thymeleaf template
-					Defines a template for where all of our files are going to be found
+			Generation Two - thymeleaf template
+				Defines a template for where all of our files are going to be found
 
 		-->
 		<dependency>
@@ -68,14 +68,14 @@
 		</dependency>
 
 		<!--
-				Generation Two - web jars
-					You are going to use these two packages so frequently why worry about which version
-						you are using and where to find it. Let Spring box them up in our jar and provide
-						them to our front end HTML.
-					bootstrap - does great things for managing your web page without needing to know
-								which browser or platform you are running on
-					jQuery	- This is what the big kids are using on their web site to get
-								data to where they want it.
+			Generation Two - web jars
+				You are going to use these two packages so frequently why worry about which version
+					you are using and where to find it. Let Spring box them up in our jar and provide
+					them to our front end HTML.
+				bootstrap - does great things for managing your web page without needing to know
+							which browser or platform you are running on
+				jQuery	- This is what the big kids are using on their web site to get
+							data to where they want it.
 		-->
 		<dependency>
 			<groupId>org.webjars</groupId>

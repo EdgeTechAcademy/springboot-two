@@ -1,9 +1,6 @@
 package edgetech.springframework.controllers;
 
-import edgetech.springframework.domain.Product;
-import edgetech.springframework.repositories.ProductRepository;
 import edgetech.springframework.services.ProductService;
-import edgetech.springframework.services.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

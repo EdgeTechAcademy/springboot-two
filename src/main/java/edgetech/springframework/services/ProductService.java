@@ -1,6 +1,5 @@
 package edgetech.springframework.services;
 
-
 import edgetech.springframework.domain.Product;
 
 public interface ProductService {
