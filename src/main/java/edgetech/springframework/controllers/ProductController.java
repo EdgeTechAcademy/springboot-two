@@ -8,15 +8,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
+
 @Controller
 public class ProductController {
 
 	//	Use a service for when things get complicated.
-	//	more so than just doing a findAll or delete
+	//	more than just doing a findAll or delete
 	//	the project has a great great example I think
 	//	spring-boot-sample-data-jpa
 	//	spring-boot/spring-boot-samples/spring-boot-sample-data-jpa/
-	//		is is in the spring-boot-master zip file in the download folder!!!!!
+	//		it is in the spring-boot-master zip file in the download folder!!!!!
 	//			this has been copied to the Projects/spring-boot-master folder
 	//		I need to review this !!!
 
@@ -27,7 +29,7 @@ public class ProductController {
 		this.productService = productService;
 	}
 
-	@RequestMapping(value = "/products", method = RequestMethod.GET)
+	@RequestMapping(value = "/products", method = GET)
 	public String list(Model model){
 		model.addAttribute("products", productService.listAllProducts());
 		System.out.println("Returning products:");

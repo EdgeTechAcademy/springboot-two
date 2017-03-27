@@ -5,8 +5,6 @@ import edgetech.springframework.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Iterator;
-
 @Service
 public class ProductServiceImpl implements ProductService {
 
