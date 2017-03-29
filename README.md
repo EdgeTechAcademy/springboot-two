@@ -5,7 +5,7 @@
 2.  **ProductController.java**	provides the mapping of the URL in the browser address bar to an actual file
 3.  **Product.java**			The Entity definition for the Product table
 4.  **ProductRepository.java**	extends the CrudRepository and that is it
-5.  **ProductService.java**		Interface: lists our avaialable services
+5.  **ProductService.java**		Interface: lists our available services
 6.  **ProductServiceImpl.java**	Implements the service methods
 7.  **pom.xml**					Adding in data and web jars
   1.  **JPA** - We want to access a database - Java Persistent API
