@@ -1,5 +1,6 @@
 package edgetech.springframework.controllers;
 
+import edgetech.springframework.domain.Product;
 import edgetech.springframework.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,5 +39,38 @@ public class ProductController {
 			return "productshow";
 		}
 		else return "404";
+	}
+
+	//	These items have been added for the new functionality
+	//		to make our app a richer MVC example
+	@RequestMapping("product/edit/{id}")
+	public String edit(@PathVariable Integer id, Model model){
+		model.addAttribute("product", productService.getProductById(id));
+		return "productform";
+	}
+
+	@RequestMapping("product/new")
+	public String newProduct(Model model){
+		model.addAttribute("product", new Product());
+		return "productform";
+	}
+
+	@RequestMapping(value = "product", method = RequestMethod.POST)
+	public String saveProduct(Product product){
+		productService.saveProduct(product);
+		return "redirect:/product/" + product.getId();
+	}
+
+	@RequestMapping("product/delete/{id}")
+	public String delete(@PathVariable Integer id){
+		productService.deleteProduct(id);
+		return "redirect:/products";
+	}
+
+	@RequestMapping(value = "/oddProducts", method = RequestMethod.GET)
+	public String listOdd(Model model){
+		model.addAttribute("products", productService.listOddProducts());
+		System.out.println("Returning products:");
+		return "products";
 	}
 }
