@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
-
+/**
+ * Created by Edge Tech Academy on 12/2/2016.
+ */
 @Controller
 public class ProductController {
 
@@ -23,10 +24,10 @@ public class ProductController {
 		this.productService = productService;
 	}
 
-	@RequestMapping(value = "/products", method = GET)
+	@RequestMapping(value = "/products", method = RequestMethod.GET)
 	public String list(Model model){
 		model.addAttribute("products", productService.listAllProducts());
-		System.out.println("Returning products:");
+		System.out.println("Returning Products:");
 		return "products";
 	}
 
