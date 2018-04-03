@@ -40,8 +40,7 @@ public class ProductLoader implements ApplicationListener<ContextRefreshedEvent>
 	public void createProduct(String productId, String description, String imageUrl ) {
 		Product product;
 
-		String price = String.format( "%4.2f", Math.random()*50);
-		product = new Product(productId, description, imageUrl, new BigDecimal( price ));
+		product = new Product(productId, description, imageUrl, new BigDecimal( Math.random()*50 ));
 		productRepository.save(product);
 		log.info( "id: " + product.getId() + "  " + product.getDescription( ));
 	}
